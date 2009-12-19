@@ -1,0 +1,21 @@
+---
+abstract: 'Option parsing, done differently'
+author:
+  - 'Ryan P. Kelly <rpkelly22@gmail.com>'
+generated_by: 'Dist::Zilla version 1.093400'
+license: mit
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Getopt-Flex
+requires:
+  Carp: 0
+  Clone: 0
+  Moose: 0
+  Moose::Util::TypeConstraints: 0
+  MooseX::StrictConstructor: 0
+  Perl6::Junction: 0
+  Readonly: 0
+  Test::Exception: 0
+  Test::More: 0
+version: 0.10
