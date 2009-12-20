@@ -4,7 +4,7 @@
       "version" : 1.4,
       "url" : "http://module-build.sourceforge.net/META-spec-v1.4.html"
    },
-   "version" : "0.10",
+   "version" : "0.11",
    "name" : "Getopt-Flex",
    "author" : [
       "Ryan P. Kelly <rpkelly22@gmail.com>"
@@ -12,13 +12,14 @@
    "license" : "mit",
    "requires" : {
       "Test::Exception" : "0",
+      "ExtUtils::MakeMaker" : "0",
       "Moose::Util::TypeConstraints" : "0",
-      "Readonly" : 0,
+      "Readonly" : "0",
       "Perl6::Junction" : "0",
-      "Carp" : 0,
+      "Carp" : "0",
       "Test::More" : "0",
       "MooseX::StrictConstructor" : "0",
-      "Clone" : 0,
+      "Clone" : "0",
       "Moose" : "0"
    },
    "abstract" : "Option parsing, done differently"

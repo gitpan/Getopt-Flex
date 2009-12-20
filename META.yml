@@ -11,6 +11,7 @@ name: Getopt-Flex
 requires:
   Carp: 0
   Clone: 0
+  ExtUtils::MakeMaker: 0
   Moose: 0
   Moose::Util::TypeConstraints: 0
   MooseX::StrictConstructor: 0
@@ -18,4 +19,4 @@ requires:
   Readonly: 0
   Test::Exception: 0
   Test::More: 0
-version: 0.10
+version: 0.11

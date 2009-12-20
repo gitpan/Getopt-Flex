@@ -9,7 +9,7 @@ use Getopt::Flex::Spec;
 use Perl6::Junction qw(any);
 
 #set the version
-our $VERSION   = '0.10';
+our $VERSION   = '0.11';
 $VERSION = eval $VERSION;
 
 #return values for the function that
@@ -508,7 +508,7 @@ Getopt::Flex
 
 =head1 VERSION
 
-version 0.10
+version 0.11
 
 =head1 SYNOPSIS
 
@@ -516,7 +516,7 @@ version 0.10
   my $foo; my $use; my $num; my %has; my @arr;
   
   my $cfg = {
-      'long_option_mode' => 'STOP',
+      'non_option_mode' => 'STOP',
   };
   
   my $spec = {

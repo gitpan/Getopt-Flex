@@ -1,5 +1,5 @@
 package Getopt::Flex::Spec;
-our $VERSION = '0.10';
+our $VERSION = '0.11';
 
 use Moose;
 use Getopt::Flex::Spec::Argument;
@@ -87,7 +87,7 @@ Getopt::Flex::Spec
 
 =head1 VERSION
 
-version 0.10
+version 0.11
 
 =head1 DESCRIPTION
 

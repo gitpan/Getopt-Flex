@@ -1,5 +1,5 @@
 package Getopt::Flex::Config;
-our $VERSION = '0.10';
+our $VERSION = '0.11';
 
 use Moose;
 use MooseX::StrictConstructor;
@@ -91,7 +91,7 @@ Getopt::Flex::Config
 
 =head1 VERSION
 
-version 0.10
+version 0.11
 
 =head1 DESCRIPTION
 
