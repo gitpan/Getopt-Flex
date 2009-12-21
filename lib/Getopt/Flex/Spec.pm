@@ -1,5 +1,5 @@
 package Getopt::Flex::Spec;
-our $VERSION = '0.20';
+our $VERSION = '0.21';
 
 # ABSTRACT: Getopt::Flex's way of handling an option spec
 
@@ -98,7 +98,7 @@ Getopt::Flex::Spec - Getopt::Flex's way of handling an option spec
 
 =head1 VERSION
 
-version 0.20
+version 0.21
 
 =head1 DESCRIPTION
 

@@ -1,5 +1,5 @@
 package Getopt::Flex;
-our $VERSION = '0.20';
+our $VERSION = '0.21';
 
 # ABSTRACT: Option parsing, done different.
 
@@ -55,7 +55,6 @@ has '_args' => (
     is => 'rw',
     isa => 'ArrayRef',
     init_arg => undef,
-    default => sub { my @a = Clone::clone(@ARGV); return \@a },
 ); 
 
 #an array of the valid switches passed to the script               
@@ -100,6 +99,9 @@ has 'error' => (
 
 sub BUILD {
     my $self = shift;
+    
+    #set args from argv
+    $self->_args(Clone::clone(\@ARGV));
     
     #create the configuration
     $self->_config(Getopt::Flex::Config->new($self->config()));
@@ -561,7 +563,7 @@ Getopt::Flex - Option parsing, done different.
 
 =head1 VERSION
 
-version 0.20
+version 0.21
 
 =head1 SYNOPSIS
 
