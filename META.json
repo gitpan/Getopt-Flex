@@ -4,7 +4,7 @@
       "version" : 1.4,
       "url" : "http://module-build.sourceforge.net/META-spec-v1.4.html"
    },
-   "version" : "0.22",
+   "version" : "0.30",
    "name" : "Getopt-Flex",
    "author" : [
       "Ryan P. Kelly <rpkelly@cpan.org>"
@@ -22,7 +22,7 @@
       "Test::More" : "0",
       "Image::ExifTool" : "0",
       "MooseX::StrictConstructor" : "0",
-      "Time::Format" : 0,
+      "Time::Format" : "0",
       "Clone" : "0",
       "Moose" : "0"
    },

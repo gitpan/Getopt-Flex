@@ -1,5 +1,5 @@
 package Getopt::Flex;
-our $VERSION = '0.22';
+our $VERSION = '0.30';
 
 # ABSTRACT: Option parsing, done different.
 
@@ -92,6 +92,7 @@ has 'error' => (
     is => 'ro',
     isa => 'Str',
     writer => '_set_error',
+    reader => 'get_error',
     init_arg => undef,
     default => '',    
 );
@@ -563,7 +564,7 @@ Getopt::Flex - Option parsing, done different.
 
 =head1 VERSION
 
-version 0.22
+version 0.30
 
 =head1 SYNOPSIS
 
@@ -584,7 +585,7 @@ version 0.22
   
   my $op = Getopt::Flex->new({spec => $spec, config => $cfg});
   if(!$op->getopts()) {
-      print "**ERROR**: ", $op->error();
+      print "**ERROR**: ", $op->get_error();
       print $op->get_help();
       exit(0);
   }
@@ -627,7 +628,7 @@ Then, create a configuration, if necassary, like so:
 
   my $cfg = { 'non_option_mode' => 'STOP' };
 
-For more informatin about configuration, see L<Specifying a configuration>.
+For more information about configuration, see L<Specifying a configuration>.
 Then, create a specification, like so: 
 
   my $spec = {
@@ -644,7 +645,8 @@ And finally invoke the option processor with:
   $op->getopts();
 
 In the event of an error, C<getopts()> will return false,
-and set an error message which can be retrieved via C<error>.
+and set an error message which can be retrieved via C<get_error()>.
+For examples, please see the examples/ directory.
 
 =head2 Specifying Options
 
@@ -934,7 +936,7 @@ Returns an automatically generated help message
 
 Returns the supplied description, or a single newline if none provided.
 
-=head2 error
+=head2 get_error
 
 Returns an error message if set, empty string otherwise.
 
