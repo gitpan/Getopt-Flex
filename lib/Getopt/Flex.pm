@@ -1,5 +1,5 @@
 package Getopt::Flex;
-our $VERSION = '0.21';
+our $VERSION = '0.22';
 
 # ABSTRACT: Option parsing, done different.
 
@@ -563,7 +563,7 @@ Getopt::Flex - Option parsing, done different.
 
 =head1 VERSION
 
-version 0.21
+version 0.22
 
 =head1 SYNOPSIS
 
@@ -586,6 +586,7 @@ version 0.21
   if(!$op->getopts()) {
       print "**ERROR**: ", $op->error();
       print $op->get_help();
+      exit(0);
   }
 
 =head1 DESCRIPTION

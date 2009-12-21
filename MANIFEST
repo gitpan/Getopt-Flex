@@ -5,6 +5,7 @@ META.yml
 Makefile.PL
 README
 dist.ini
+examples/imgcopyrighter.pl
 examples/imgresize.pl
 lib/Getopt/Flex.pm
 lib/Getopt/Flex/Config.pm

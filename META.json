@@ -4,24 +4,25 @@
       "version" : 1.4,
       "url" : "http://module-build.sourceforge.net/META-spec-v1.4.html"
    },
-   "version" : "0.21",
+   "version" : "0.22",
    "name" : "Getopt-Flex",
    "author" : [
       "Ryan P. Kelly <rpkelly@cpan.org>"
    ],
    "license" : "mit",
    "requires" : {
-      "File::Find::Rule" : 0,
+      "File::Find::Rule" : "0",
       "Test::Exception" : "0",
       "ExtUtils::MakeMaker" : 0,
-      "Imager" : 0,
+      "Imager" : "0",
       "Moose::Util::TypeConstraints" : "0",
       "Readonly" : "0",
       "Carp" : "0",
       "Perl6::Junction" : "0",
       "Test::More" : "0",
-      "Image::ExifTool" : 0,
+      "Image::ExifTool" : "0",
       "MooseX::StrictConstructor" : "0",
+      "Time::Format" : 0,
       "Clone" : "0",
       "Moose" : "0"
    },

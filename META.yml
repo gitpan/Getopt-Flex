@@ -22,4 +22,5 @@ requires:
   Readonly: 0
   Test::Exception: 0
   Test::More: 0
-version: 0.21
+  Time::Format: 0
+version: 0.22
