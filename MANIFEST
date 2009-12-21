@@ -20,5 +20,5 @@ t/07-defaults.t
 t/08-non-option-stop.t
 t/09-single-or-double-longs.t
 t/10-doc.t
-xt/release/pod-coverage.t
-xt/release/pod-syntax.t
+t/release-pod-coverage.t
+t/release-pod-syntax.t

@@ -1,5 +1,5 @@
 package Getopt::Flex::Config;
-our $VERSION = '0.12';
+our $VERSION = '0.20';
 
 # ABSTRACT: Getopt::Flex's way of handling config
 
@@ -93,7 +93,7 @@ Getopt::Flex::Config - Getopt::Flex's way of handling config
 
 =head1 VERSION
 
-version 0.12
+version 0.20
 
 =head1 DESCRIPTION
 

@@ -1,5 +1,5 @@
 package Getopt::Flex::Spec;
-our $VERSION = '0.12';
+our $VERSION = '0.20';
 
 # ABSTRACT: Getopt::Flex's way of handling an option spec
 
@@ -76,6 +76,15 @@ sub switch_requires_val {
 }
 
 
+sub get_switch_error {
+    my ($self, $switch) = @_;
+    
+    Carp::confess "No such switch $switch\n" if !$self->check_switch($switch);
+    
+    return $self->_argmap()->{$switch}->error();
+}
+
+
 no Moose;
 
 1;
@@ -89,7 +98,7 @@ Getopt::Flex::Spec - Getopt::Flex's way of handling an option spec
 
 =head1 VERSION
 
-version 0.12
+version 0.20
 
 =head1 DESCRIPTION
 
@@ -113,6 +122,10 @@ Set a switch to the supplied value
 =head2 switch_requires_val
 
 Check whether or not a switch requires a value
+
+=head2 get_switch_error
+
+Given a switch return any associated error message.
 
 =for Pod::Coverage   BUILD
 
