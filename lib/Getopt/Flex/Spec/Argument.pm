@@ -1,5 +1,7 @@
 package Getopt::Flex::Spec::Argument;
-our $VERSION = '0.11';
+our $VERSION = '0.12';
+
+# ABSTRACT: Getopt::Flex's way of specifying arguments
 
 use Carp;
 use Moose;
@@ -311,11 +313,11 @@ __END__
 
 =head1 NAME
 
-Getopt::Flex::Spec::Argument
+Getopt::Flex::Spec::Argument - Getopt::Flex's way of specifying arguments
 
 =head1 VERSION
 
-version 0.11
+version 0.12
 
 =head1 DESCRIPTION
 
@@ -340,7 +342,7 @@ Check whether or not this argument requires a value
 
 =head1 AUTHOR
 
-  Ryan P. Kelly <rpkelly22@gmail.com>
+  Ryan P. Kelly <rpkelly@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 

@@ -1,5 +1,7 @@
 package Getopt::Flex::Config;
-our $VERSION = '0.11';
+our $VERSION = '0.12';
+
+# ABSTRACT: Getopt::Flex's way of handling config
 
 use Moose;
 use MooseX::StrictConstructor;
@@ -87,11 +89,11 @@ __END__
 
 =head1 NAME
 
-Getopt::Flex::Config
+Getopt::Flex::Config - Getopt::Flex's way of handling config
 
 =head1 VERSION
 
-version 0.11
+version 0.12
 
 =head1 DESCRIPTION
 
@@ -108,7 +110,7 @@ Getopt::Flex::Config - Configuration class for Getopt::Flex
 
 =head1 AUTHOR
 
-  Ryan P. Kelly <rpkelly22@gmail.com>
+  Ryan P. Kelly <rpkelly@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 

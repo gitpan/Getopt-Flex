@@ -1,5 +1,7 @@
 package Getopt::Flex::Spec;
-our $VERSION = '0.11';
+our $VERSION = '0.12';
+
+# ABSTRACT: Getopt::Flex's way of handling an option spec
 
 use Moose;
 use Getopt::Flex::Spec::Argument;
@@ -83,11 +85,11 @@ __END__
 
 =head1 NAME
 
-Getopt::Flex::Spec
+Getopt::Flex::Spec - Getopt::Flex's way of handling an option spec
 
 =head1 VERSION
 
-version 0.11
+version 0.12
 
 =head1 DESCRIPTION
 
@@ -116,7 +118,7 @@ Check whether or not a switch requires a value
 
 =head1 AUTHOR
 
-  Ryan P. Kelly <rpkelly22@gmail.com>
+  Ryan P. Kelly <rpkelly@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 

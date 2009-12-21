@@ -9,9 +9,9 @@ use ExtUtils::MakeMaker;
 WriteMakefile(
   DISTNAME  => 'Getopt-Flex',
   NAME      => 'Getopt::Flex',
-  AUTHOR    => "Ryan\ P\.\ Kelly\ \<rpkelly22\@gmail\.com\>",
+  AUTHOR    => "Ryan\ P\.\ Kelly\ \<rpkelly\@cpan\.org\>",
   ABSTRACT  => "Option\ parsing\,\ done\ differently",
-  VERSION   => '0.11',
+  VERSION   => '0.12',
   EXE_FILES => [ qw() ],
   (eval { ExtUtils::MakeMaker->VERSION(6.31) } ? (LICENSE => 'mit') : ()),
   PREREQ_PM    => {
