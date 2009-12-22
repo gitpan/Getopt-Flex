@@ -19,7 +19,7 @@ t/04-bundled.t
 t/05-validators.t
 t/06-callbacks.t
 t/07-defaults.t
-t/08-non-option-stop.t
+t/08-non-option-mode.t
 t/09-single-or-double-longs.t
 t/10-doc.t
 t/11-types.t

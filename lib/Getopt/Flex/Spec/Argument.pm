@@ -1,5 +1,5 @@
 package Getopt::Flex::Spec::Argument;
-our $VERSION = '0.40';
+our $VERSION = '0.50';
 
 # ABSTRACT: Getopt::Flex's way of specifying arguments
 
@@ -358,7 +358,7 @@ Getopt::Flex::Spec::Argument - Getopt::Flex's way of specifying arguments
 
 =head1 VERSION
 
-version 0.40
+version 0.50
 
 =head1 DESCRIPTION
 

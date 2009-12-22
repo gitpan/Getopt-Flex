@@ -1,5 +1,5 @@
 package Getopt::Flex::Config;
-our $VERSION = '0.40';
+our $VERSION = '0.50';
 
 # ABSTRACT: Getopt::Flex's way of handling config
 
@@ -8,7 +8,7 @@ use MooseX::StrictConstructor;
 use Moose::Util::TypeConstraints;
 
 #valid non_option_mode arguments
-enum 'NonOptionMode' => qw(IGNORE STOP);
+enum 'NonOptionMode' => qw(IGNORE SWITCH_RET_0 VALUE_RET_0 STOP_RET_0 STOP);
  
 #valid long_option_mode arguments           
 enum 'LongOptionMode' => qw(REQUIRE_DOUBLE_DASH SINGLE_OR_DOUBLE);
@@ -93,7 +93,7 @@ Getopt::Flex::Config - Getopt::Flex's way of handling config
 
 =head1 VERSION
 
-version 0.40
+version 0.50
 
 =head1 DESCRIPTION
 
