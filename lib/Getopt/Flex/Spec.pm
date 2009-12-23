@@ -1,5 +1,5 @@
 package Getopt::Flex::Spec;
-our $VERSION = '0.50';
+our $VERSION = '0.60';
 
 # ABSTRACT: Getopt::Flex's way of handling an option spec
 
@@ -21,6 +21,13 @@ has '_argmap' => (
     default => sub { {} },
     init_arg => undef,
 );
+
+has '_config' => (
+    is => 'ro',
+    isa => 'Getopt::Flex::Config',
+    required => 1,
+    init_arg => 'config',
+);
                 
                 
 sub BUILD {
@@ -40,6 +47,10 @@ sub BUILD {
         
         #map each argument onto its aliases
         foreach my $alias (@aliases) {
+            if($self->_config()->case_mode() eq 'INSENSITIVE') {
+                $alias = lc($alias);
+            }
+            
             #no duplicate aliases (or primary names) allowed
             if(defined($argmap->{$alias})) {
                 my $sp = $argmap->{$alias}->switchspec();
@@ -54,6 +65,11 @@ sub BUILD {
 
 sub check_switch {
     my ($self, $switch) = @_;
+
+    if($self->_config()->case_mode() eq 'INSENSITIVE') {
+        $switch = lc($switch);
+    }
+    
     return defined($self->_argmap()->{$switch});
 }
 
@@ -62,6 +78,10 @@ sub set_switch {
     my ($self, $switch, $val) = @_;
     
     Carp::confess "No such switch $switch\n" if !$self->check_switch($switch);
+    
+    if($self->_config()->case_mode() eq 'INSENSITIVE') {
+        $switch = lc($switch);
+    }
     
     return $self->_argmap()->{$switch}->set_value($val);
 }
@@ -72,6 +92,10 @@ sub switch_requires_val {
     
     Carp::confess "No such switch $switch\n" if !$self->check_switch($switch);
     
+    if($self->_config()->case_mode() eq 'INSENSITIVE') {
+        $switch = lc($switch);
+    }
+    
     return $self->_argmap()->{$switch}->requires_val();
 }
 
@@ -80,6 +104,10 @@ sub get_switch_error {
     my ($self, $switch) = @_;
     
     Carp::confess "No such switch $switch\n" if !$self->check_switch($switch);
+    
+    if($self->_config()->case_mode() eq 'INSENSITIVE') {
+        $switch = lc($switch);
+    }
     
     return $self->_argmap()->{$switch}->error();
 }
@@ -98,7 +126,7 @@ Getopt::Flex::Spec - Getopt::Flex's way of handling an option spec
 
 =head1 VERSION
 
-version 0.50
+version 0.60
 
 =head1 DESCRIPTION
 

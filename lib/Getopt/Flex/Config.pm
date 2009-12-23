@@ -1,5 +1,5 @@
 package Getopt::Flex::Config;
-our $VERSION = '0.50';
+our $VERSION = '0.60';
 
 # ABSTRACT: Getopt::Flex's way of handling config
 
@@ -12,6 +12,9 @@ enum 'NonOptionMode' => qw(IGNORE SWITCH_RET_0 VALUE_RET_0 STOP_RET_0 STOP);
  
 #valid long_option_mode arguments           
 enum 'LongOptionMode' => qw(REQUIRE_DOUBLE_DASH SINGLE_OR_DOUBLE);
+
+#valid case_mode arguments
+enum 'CaseMode' => qw(SENSITIVE INSENSITIVE);
 
 #how to react when encountering something that
 #isn't an option
@@ -57,6 +60,13 @@ has 'desc' => (
     default => '',
 );
 
+#for allowing case-insensitive handling of options
+has 'case_mode' => (
+    is => 'ro',
+    isa => 'CaseMode',
+    default => 'SENSITIVE',
+);
+
                         
 sub BUILD {
     my ($self) = @_;
@@ -93,7 +103,7 @@ Getopt::Flex::Config - Getopt::Flex's way of handling config
 
 =head1 VERSION
 
-version 0.50
+version 0.60
 
 =head1 DESCRIPTION
 
