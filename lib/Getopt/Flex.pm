@@ -1,5 +1,5 @@
 package Getopt::Flex;
-our $VERSION = '0.60';
+our $VERSION = '0.61';
 
 # ABSTRACT: Option parsing, done different.
 
@@ -609,7 +609,7 @@ Getopt::Flex - Option parsing, done different.
 
 =head1 VERSION
 
-version 0.60
+version 0.61
 
 =head1 SYNOPSIS
 
@@ -643,7 +643,8 @@ configuration is optional and defaults to a few, smart parameters.
 Generally, it adheres to the POSIX syntax with GNU extensions for
 command line options. As a result, options may be longer than a
 single letter, and would begin with "--". Support also exists
-for bundling of command line options, but is not enabled by defualt.
+for bundling of command line options and using switches without
+regard to their case, but these are not enabled by defualt.
 
 Getopt::Flex is an alternative to other modules in the Getopt::
 namespace, including the much used L<Getopt::Long> and
