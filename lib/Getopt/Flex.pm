@@ -1,5 +1,5 @@
 package Getopt::Flex;
-our $VERSION = '0.62';
+our $VERSION = '0.63';
 
 # ABSTRACT: Option parsing, done different.
 
@@ -609,7 +609,7 @@ Getopt::Flex - Option parsing, done different.
 
 =head1 VERSION
 
-version 0.62
+version 0.63
 
 =head1 SYNOPSIS
 
@@ -674,14 +674,14 @@ Then, create a configuration, if necassary, like so:
 
   my $cfg = { 'non_option_mode' => 'STOP' };
 
-For more information about configuration, see L<Specifying a configuration>.
+For more information about configuration, see L<Configuring Getopt::Flex>.
 Then, create a specification, like so: 
 
   my $spec = {
       'foo|f' => {'var' => \$foo, 'type' => 'Str'},
   };
 
-For more information about specifications, see L<Specifying options>. Create
+For more information about specifications, see L<Specifying Options>. Create
 a new Getopt::Flex object:
 
   my $op = Getopt::Flex->new({spec => $spec, config => $cfg});
