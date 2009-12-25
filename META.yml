@@ -11,7 +11,6 @@ name: Getopt-Flex
 requires:
   Carp: 0
   Clone: 0
-  ExtUtils::MakeMaker: 0
   File::Find::Rule: 0
   Image::ExifTool: 0
   Imager: 0
@@ -19,10 +18,8 @@ requires:
   Moose::Meta::TypeConstraint: 0
   Moose::Util::TypeConstraints: 0
   MooseX::StrictConstructor: 0
-  Perl6::Junction: 0
-  Readonly: 0
   Test::Exception: 0
   Test::More: 0
   Test::Warn: 0
   Time::Format: 0
-version: 0.61
+version: 0.62

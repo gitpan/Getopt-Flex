@@ -11,7 +11,7 @@ WriteMakefile(
   NAME      => 'Getopt::Flex',
   AUTHOR    => "Ryan\ P\.\ Kelly\ \<rpkelly\@cpan\.org\>",
   ABSTRACT  => "Option\ parsing\,\ done\ differently",
-  VERSION   => '0.61',
+  VERSION   => '0.62',
   EXE_FILES => [ qw() ],
   (eval { ExtUtils::MakeMaker->VERSION(6.31) } ? (LICENSE => 'mit') : ()),
   PREREQ_PM    => {
@@ -20,9 +20,7 @@ WriteMakefile(
     "Imager" => '0',
     "Moose::Meta::TypeConstraint" => '0',
     "Moose::Util::TypeConstraints" => '0',
-    "Readonly" => '0',
     "Carp" => '0',
-    "Perl6::Junction" => '0',
     "Test::More" => '0',
     "Image::ExifTool" => '0',
     "Test::Warn" => '0',
