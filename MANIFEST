@@ -24,5 +24,6 @@ t/09-single-or-double-longs.t
 t/10-doc.t
 t/11-types.t
 t/12-case-mode.t
+t/13-get-switch.t
 t/release-pod-coverage.t
 t/release-pod-syntax.t

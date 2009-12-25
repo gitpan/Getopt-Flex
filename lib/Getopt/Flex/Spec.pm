@@ -1,5 +1,5 @@
 package Getopt::Flex::Spec;
-our $VERSION = '0.65';
+our $VERSION = '0.70';
 
 # ABSTRACT: Getopt::Flex's way of handling an option spec
 
@@ -44,6 +44,8 @@ sub BUILD {
         my $argument = Getopt::Flex::Spec::Argument->new($spec->{$switch_spec});
         
         my @aliases = @{$argument->aliases()};
+        
+        $argmap->{$switch_spec} = $argument;
         
         #map each argument onto its aliases
         foreach my $alias (@aliases) {
@@ -113,6 +115,27 @@ sub get_switch_error {
 }
 
 
+sub get_switch {
+    my ($self, $switch) = @_;
+    
+    return undef if !$self->check_switch($switch);
+    
+    if($self->_config()->case_mode() eq 'INSENSITIVE') {
+        $switch = lc($switch);
+    }
+    
+    my $arg = $self->_argmap()->{$switch};
+    
+    if($arg->type() =~ /^ArrayRef/) {
+        return $arg->var();
+    } elsif($arg->type() =~ /^HashRef/) {
+        return $arg->var();
+    } else {
+        return ${$arg->var()};
+    }
+}
+
+
 no Moose;
 
 1;
@@ -126,7 +149,7 @@ Getopt::Flex::Spec - Getopt::Flex's way of handling an option spec
 
 =head1 VERSION
 
-version 0.65
+version 0.70
 
 =head1 DESCRIPTION
 
@@ -154,6 +177,13 @@ Check whether or not a switch requires a value
 =head2 get_switch_error
 
 Given a switch return any associated error message.
+
+=head2 get_switch
+
+Passing this function the name of a switch (or the switch spec) will
+cause it to return the value of a ScalarRef, a HashRef, or an ArrayRef
+(based on the type given), or undef if the given switch does not
+correspond to any defined switch.
 
 =for Pod::Coverage   BUILD
 
