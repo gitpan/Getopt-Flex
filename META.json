@@ -4,7 +4,7 @@
       "version" : 1.4,
       "url" : "http://module-build.sourceforge.net/META-spec-v1.4.html"
    },
-   "version" : "0.64",
+   "version" : "0.65",
    "name" : "Getopt-Flex",
    "author" : [
       "Ryan P. Kelly <rpkelly@cpan.org>"

@@ -22,4 +22,4 @@ requires:
   Test::More: 0
   Test::Warn: 0
   Time::Format: 0
-version: 0.64
+version: 0.65
