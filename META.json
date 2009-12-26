@@ -4,7 +4,7 @@
       "version" : 1.4,
       "url" : "http://module-build.sourceforge.net/META-spec-v1.4.html"
    },
-   "version" : "0.70",
+   "version" : "0.71",
    "name" : "Getopt-Flex",
    "author" : [
       "Ryan P. Kelly <rpkelly@cpan.org>"
@@ -13,17 +13,16 @@
    "requires" : {
       "File::Find::Rule" : "0",
       "Test::Exception" : "0",
-      "ExtUtils::MakeMaker" : 0,
-      "Imager" : "0",
-      "Moose::Meta::TypeConstraint" : "0",
+      "Imager" : 0,
+      "Moose::Meta::TypeConstraint" : 0,
       "Moose::Util::TypeConstraints" : "0",
-      "Carp" : "0",
+      "Carp" : 0,
       "Test::More" : "0",
       "Image::ExifTool" : "0",
-      "Test::Warn" : "0",
+      "Test::Warn" : 0,
       "MooseX::StrictConstructor" : "0",
-      "Time::Format" : "0",
-      "Clone" : "0",
+      "Time::Format" : 0,
+      "Clone" : 0,
       "Moose" : "0"
    },
    "abstract" : "Option parsing, done differently"

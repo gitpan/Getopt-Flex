@@ -1,5 +1,5 @@
 package Getopt::Flex;
-our $VERSION = '0.70';
+our $VERSION = '0.71';
 
 # ABSTRACT: Option parsing, done different.
 
@@ -603,6 +603,7 @@ sub get_switch {
 }
 
 
+
 no Moose;
 
 1;
@@ -616,7 +617,7 @@ Getopt::Flex - Option parsing, done different.
 
 =head1 VERSION
 
-version 0.70
+version 0.71
 
 =head1 SYNOPSIS
 
@@ -1062,6 +1063,12 @@ cause it to return the value of a ScalarRef, a HashRef, or an ArrayRef
 correspond to any defined switch.
 
 =for Pod::Coverage   BUILD
+
+=head1 REPOSITORY
+
+The source code repository for this project is located at:
+
+  http://github.com/f0rk/getopt-flex
 
 =head1 AUTHOR
 
