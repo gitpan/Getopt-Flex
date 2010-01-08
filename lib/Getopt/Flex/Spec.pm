@@ -1,5 +1,5 @@
 package Getopt::Flex::Spec;
-our $VERSION = '0.71';
+our $VERSION = '0.72';
 
 # ABSTRACT: Getopt::Flex's way of handling an option spec
 
@@ -149,7 +149,7 @@ Getopt::Flex::Spec - Getopt::Flex's way of handling an option spec
 
 =head1 VERSION
 
-version 0.71
+version 0.72
 
 =head1 DESCRIPTION
 
@@ -193,7 +193,7 @@ correspond to any defined switch.
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2009 by Ryan P. Kelly.
+This software is Copyright (c) 2010 by Ryan P. Kelly.
 
 This is free software, licensed under:
 
