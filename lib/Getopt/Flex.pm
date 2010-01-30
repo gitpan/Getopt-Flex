@@ -1,8 +1,10 @@
 package Getopt::Flex;
-our $VERSION = '0.72';
+our $VERSION = '1.00';
 
 # ABSTRACT: Option parsing, done different.
 
+use strict; #shut up cpants
+use warnings; #shut up cpants
 use Clone;
 use Moose;
 use MooseX::StrictConstructor;
@@ -617,7 +619,7 @@ Getopt::Flex - Option parsing, done different.
 
 =head1 VERSION
 
-version 0.72
+version 1.00
 
 =head1 SYNOPSIS
 

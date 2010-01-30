@@ -1,8 +1,10 @@
 package Getopt::Flex::Spec;
-our $VERSION = '0.72';
+our $VERSION = '1.00';
 
 # ABSTRACT: Getopt::Flex's way of handling an option spec
 
+use strict; #shut up cpants
+use warnings; #shut up cpants
 use Moose;
 use Getopt::Flex::Spec::Argument;
 use MooseX::StrictConstructor;
@@ -149,7 +151,7 @@ Getopt::Flex::Spec - Getopt::Flex's way of handling an option spec
 
 =head1 VERSION
 
-version 0.72
+version 1.00
 
 =head1 DESCRIPTION
 

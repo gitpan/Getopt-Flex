@@ -1,8 +1,10 @@
 package Getopt::Flex::Spec::Argument;
-our $VERSION = '0.72';
+our $VERSION = '1.00';
 
 # ABSTRACT: Getopt::Flex's way of specifying arguments
 
+use strict; #shut up cpants
+use warnings; #shut up cpants
 use Carp;
 use Moose;
 use Moose::Util::TypeConstraints;
@@ -371,7 +373,7 @@ Getopt::Flex::Spec::Argument - Getopt::Flex's way of specifying arguments
 
 =head1 VERSION
 
-version 0.72
+version 1.00
 
 =head1 DESCRIPTION
 
