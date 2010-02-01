@@ -1,5 +1,5 @@
 package Getopt::Flex;
-our $VERSION = '1.01';
+our $VERSION = '1.02';
 
 # ABSTRACT: Option parsing, done different.
 
@@ -619,7 +619,7 @@ Getopt::Flex - Option parsing, done different.
 
 =head1 VERSION
 
-version 1.01
+version 1.02
 
 =head1 SYNOPSIS
 
@@ -668,7 +668,7 @@ Getopt::Flex supports long and single character options. Any character
 from [a-zA-Z0-9_?-] may be used when specifying an option. Options
 must not end in -, nor may they contain two consecutive dashes.
 
-To use Getopt::Flex in your perl program, it must contain the following
+To use Getopt::Flex in your Perl program, it must contain the following
 line:
 
   use Getopt::Flex;
