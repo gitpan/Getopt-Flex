@@ -1,7 +1,7 @@
 
 
-This archive contains the distribution Getopt-Flex, version
-1.02:
+This archive contains the distribution Getopt-Flex,
+version 1.03:
 
   Option parsing, done differently
 
@@ -10,4 +10,5 @@ This software is Copyright (c) 2010 by Ryan P. Kelly.
 This is free software, licensed under:
 
   The MIT (X11) License
+
 

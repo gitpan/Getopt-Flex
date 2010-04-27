@@ -1,30 +1,32 @@
 {
-   "generated_by" : "Dist::Zilla version 1.093400",
-   "meta-spec" : {
-      "version" : 1.4,
-      "url" : "http://module-build.sourceforge.net/META-spec-v1.4.html"
-   },
-   "version" : "1.02",
-   "name" : "Getopt-Flex",
+   "abstract" : "Option parsing, done differently",
    "author" : [
       "Ryan P. Kelly <rpkelly@cpan.org>"
    ],
-   "license" : "mit",
-   "requires" : {
-      "File::Find::Rule" : "0",
+   "build_requires" : {
       "Test::Exception" : "0",
-      "Imager" : 0,
-      "Moose::Meta::TypeConstraint" : 0,
-      "Moose::Util::TypeConstraints" : "0",
-      "Carp" : 0,
       "Test::More" : "0",
-      "Image::ExifTool" : "0",
-      "Test::Warn" : 0,
-      "MooseX::StrictConstructor" : "0",
-      "Time::Format" : 0,
-      "Clone" : 0,
-      "Moose" : "0"
+      "Test::Warn" : "0"
    },
-   "abstract" : "Option parsing, done differently"
+   "configure_requires" : {
+      "ExtUtils::MakeMaker" : "6.31"
+   },
+   "generated_by" : "Dist::Zilla version 2.101151",
+   "license" : "mit",
+   "meta-spec" : {
+      "url" : "http://module-build.sourceforge.net/META-spec-v1.4.html",
+      "version" : 1.4
+   },
+   "name" : "Getopt-Flex",
+   "recommends" : {},
+   "requires" : {
+      "Carp" : "0",
+      "Clone" : "0",
+      "Moose" : "0",
+      "Moose::Meta::TypeConstraint" : "0",
+      "Moose::Util::TypeConstraints" : "0",
+      "MooseX::StrictConstructor" : "0"
+   },
+   "version" : "1.03"
 }
 

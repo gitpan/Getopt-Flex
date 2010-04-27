@@ -12,6 +12,7 @@ lib/Getopt/Flex.pm
 lib/Getopt/Flex/Config.pm
 lib/Getopt/Flex/Spec.pm
 lib/Getopt/Flex/Spec/Argument.pm
+out.txt
 t/00-load.t
 t/01-new.t
 t/02-short.t
