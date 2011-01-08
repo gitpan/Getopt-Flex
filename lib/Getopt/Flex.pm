@@ -1,6 +1,6 @@
 package Getopt::Flex;
 BEGIN {
-  $Getopt::Flex::VERSION = '1.03';
+  $Getopt::Flex::VERSION = '1.04';
 }
 
 # ABSTRACT: Option parsing, done different.
@@ -621,7 +621,7 @@ Getopt::Flex - Option parsing, done different.
 
 =head1 VERSION
 
-version 1.03
+version 1.04
 
 =head1 SYNOPSIS
 
@@ -923,16 +923,16 @@ which is not a valid option to the program. Possible values are as follows:
 
 C<STOP> indicates that upon encountering something that isn't an option, stop
 processing immediately. C<IGNORE> is the opposite, ignoring everything that
-isn't an option. The default value is C<IGNORE>. The values ending in C<_RET_0>
-indicate that the program should return immediately (with value 0 for false)
-to indicate that there was a processing error. C<SWITCH_RET_0> means that false
-should be returned in the event an illegal switch is encountered. C<VALUE_RET_0>
-means that upon encountering a value, the program should return immediately with
-false. This would be useful if your program expects no other input other than
-option switches. C<STOP_RET_0> means that if an illegal switch or any value is
+isn't an option. The values ending in C<_RET_0> indicate that the program
+should return immediately (with value 0 for false) to indicate that there was a
+processing error. C<SWITCH_RET_0> means that false should be returned in the
+event an illegal switch is encountered. C<VALUE_RET_0> means that upon
+encountering a value, the program should return immediately with false. This
+would be useful if your program expects no other input other than option
+switches. C<STOP_RET_0> means that if an illegal switch or any value is
 encountered that false should be returned immediately.
 
-The default value is C<STOP>.
+The default value is C<IGNORE>.
 
 =head2 Configuring bundling
 
@@ -1081,7 +1081,7 @@ The source code repository for this project is located at:
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2010 by Ryan P. Kelly.
+This software is Copyright (c) 2011 by Ryan P. Kelly.
 
 This is free software, licensed under:
 

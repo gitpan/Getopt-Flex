@@ -1,6 +1,6 @@
 package Getopt::Flex::Config;
 BEGIN {
-  $Getopt::Flex::Config::VERSION = '1.03';
+  $Getopt::Flex::Config::VERSION = '1.04';
 }
 
 # ABSTRACT: Getopt::Flex's way of handling config
@@ -107,7 +107,7 @@ Getopt::Flex::Config - Getopt::Flex's way of handling config
 
 =head1 VERSION
 
-version 1.03
+version 1.04
 
 =head1 DESCRIPTION
 
@@ -128,7 +128,7 @@ Getopt::Flex::Config - Configuration class for Getopt::Flex
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2010 by Ryan P. Kelly.
+This software is Copyright (c) 2011 by Ryan P. Kelly.
 
 This is free software, licensed under:
 

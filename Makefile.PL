@@ -25,7 +25,7 @@ my %WriteMakefileArgs = (
                                            },
                        'ABSTRACT' => 'Option parsing, done differently',
                        'EXE_FILES' => [],
-                       'VERSION' => '1.03',
+                       'VERSION' => '1.04',
                        'PREREQ_PM' => {
                                         'MooseX::StrictConstructor' => '0',
                                         'Clone' => '0',

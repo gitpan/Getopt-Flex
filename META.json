@@ -27,6 +27,6 @@
       "Moose::Util::TypeConstraints" : "0",
       "MooseX::StrictConstructor" : "0"
    },
-   "version" : "1.03"
+   "version" : "1.04"
 }
 
