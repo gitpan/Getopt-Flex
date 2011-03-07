@@ -14,6 +14,7 @@ my %WriteMakefileArgs = (
   'BUILD_REQUIRES' => {
     'Test::Exception' => '0',
     'Test::More' => '0',
+    'Test::Output' => '0',
     'Test::Warn' => '0'
   },
   'CONFIGURE_REQUIRES' => {
@@ -31,7 +32,7 @@ my %WriteMakefileArgs = (
     'Moose::Util::TypeConstraints' => '0',
     'MooseX::StrictConstructor' => '0'
   },
-  'VERSION' => '1.05',
+  'VERSION' => '1.06',
   'test' => {
     'TESTS' => 't/*.t'
   }

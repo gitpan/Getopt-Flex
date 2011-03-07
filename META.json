@@ -33,11 +33,12 @@
          "requires" : {
             "Test::Exception" : 0,
             "Test::More" : 0,
+            "Test::Output" : 0,
             "Test::Warn" : 0
          }
       }
    },
    "release_status" : "stable",
-   "version" : "1.05"
+   "version" : "1.06"
 }
 

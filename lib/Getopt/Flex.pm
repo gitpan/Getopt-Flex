@@ -1,6 +1,6 @@
 package Getopt::Flex;
 BEGIN {
-  $Getopt::Flex::VERSION = '1.05';
+  $Getopt::Flex::VERSION = '1.06';
 }
 
 # ABSTRACT: Option parsing, done different.
@@ -324,6 +324,33 @@ sub getopts {
     return 1;
 }
 
+around 'getopts' => sub {
+	my $orig = shift;
+	my $self = shift;
+	
+	my $ret = $self->$orig();
+	
+	#if using auto_help and help switch given or bad call, show help
+	if($self->_config()->auto_help() && ($self->get_switch('help') || !$ret)) {
+		if(!$ret) {
+			print "**ERROR**: ", $self->get_error(), "\n";
+		}
+		print $self->get_help();
+
+		if($ENV{'HARNESS_ACTIVE'}) {
+			return $ret;
+		}
+
+		if(!$ret) {
+			exit(1);
+		} else {
+			exit(0);
+		}
+	}
+
+	return $ret;
+};
+
 sub _is_switch {
     my ($self, $switch) = @_;
     
@@ -621,7 +648,7 @@ Getopt::Flex - Option parsing, done different.
 
 =head1 VERSION
 
-version 1.05
+version 1.06
 
 =head1 SYNOPSIS
 
@@ -909,7 +936,8 @@ configuration with all possible options:
       'long_option_mode' => 'SINGLE_OR_DOUBLE',
       'case_mode' => 'INSENSITIVE',
       'usage' => 'foo [OPTIONS...] [FILES...]',
-      'desc' => 'Use foo to manage your foo archives'
+      'desc' => 'Use foo to manage your foo archives',
+	  'auto_help' => 1,
   };
 
 What follows is a discussion of each option.
@@ -1004,6 +1032,18 @@ I<desc> may be set with a string describing the program. It will be used when
 providing help automatically.
 
 The default value is the empty string.
+
+=head2 Configuring auto_help
+
+I<auto_help> can be set to true to enable the automatic creation of a C<help|h>
+switch, which, when detected, will cause the help to be printed and exit(0) to
+be called. Additionally, if the given switches are illegal (according to your
+configuration and spec), the error will be printed, the help will be printed,
+and exit(1) will be called.
+
+Use of auto_help also means you may not define other switches C<help> or C<h>.
+
+The default value is false.
 
 =head1 METHODS
 

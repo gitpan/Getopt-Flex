@@ -1,6 +1,6 @@
 package Getopt::Flex::Config;
 BEGIN {
-  $Getopt::Flex::Config::VERSION = '1.05';
+  $Getopt::Flex::Config::VERSION = '1.06';
 }
 
 # ABSTRACT: Getopt::Flex's way of handling config
@@ -71,6 +71,14 @@ has 'case_mode' => (
     default => 'SENSITIVE',
 );
 
+#if true, specifying the --help switch (or -h) will cause the help
+#to be printed, and exit(0) to be called.
+has 'auto_help' => (
+	is => 'ro',
+	isa => 'Bool',
+	default => 0,
+);
+
                         
 sub BUILD {
     my ($self) = @_;
@@ -107,7 +115,7 @@ Getopt::Flex::Config - Getopt::Flex's way of handling config
 
 =head1 VERSION
 
-version 1.05
+version 1.06
 
 =head1 DESCRIPTION
 
