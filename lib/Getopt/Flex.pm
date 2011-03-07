@@ -1,6 +1,6 @@
 package Getopt::Flex;
 BEGIN {
-  $Getopt::Flex::VERSION = '1.04';
+  $Getopt::Flex::VERSION = '1.05';
 }
 
 # ABSTRACT: Option parsing, done different.
@@ -621,7 +621,7 @@ Getopt::Flex - Option parsing, done different.
 
 =head1 VERSION
 
-version 1.04
+version 1.05
 
 =head1 SYNOPSIS
 
@@ -1077,7 +1077,7 @@ The source code repository for this project is located at:
 
 =head1 AUTHOR
 
-  Ryan P. Kelly <rpkelly@cpan.org>
+Ryan P. Kelly <rpkelly@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 

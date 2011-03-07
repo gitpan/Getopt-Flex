@@ -1,6 +1,6 @@
 package Getopt::Flex::Spec;
 BEGIN {
-  $Getopt::Flex::Spec::VERSION = '1.04';
+  $Getopt::Flex::Spec::VERSION = '1.05';
 }
 
 # ABSTRACT: Getopt::Flex's way of handling an option spec
@@ -56,6 +56,8 @@ sub BUILD {
             if($self->_config()->case_mode() eq 'INSENSITIVE') {
                 $alias = lc($alias);
             }
+
+			next if $switch_spec eq $alias;
             
             #no duplicate aliases (or primary names) allowed
             if(defined($argmap->{$alias})) {
@@ -130,9 +132,9 @@ sub get_switch {
     
     my $arg = $self->_argmap()->{$switch};
     
-    if($arg->type() =~ /^ArrayRef/) {
+    if($arg->get_type() =~ /^ArrayRef/) {
         return $arg->var();
-    } elsif($arg->type() =~ /^HashRef/) {
+    } elsif($arg->get_type() =~ /^HashRef/) {
         return $arg->var();
     } else {
         return ${$arg->var()};
@@ -153,7 +155,7 @@ Getopt::Flex::Spec - Getopt::Flex's way of handling an option spec
 
 =head1 VERSION
 
-version 1.04
+version 1.05
 
 =head1 DESCRIPTION
 
@@ -193,7 +195,7 @@ correspond to any defined switch.
 
 =head1 AUTHOR
 
-  Ryan P. Kelly <rpkelly@cpan.org>
+Ryan P. Kelly <rpkelly@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 

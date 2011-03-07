@@ -1,6 +1,6 @@
 package Getopt::Flex::Config;
 BEGIN {
-  $Getopt::Flex::Config::VERSION = '1.04';
+  $Getopt::Flex::Config::VERSION = '1.05';
 }
 
 # ABSTRACT: Getopt::Flex's way of handling config
@@ -107,7 +107,7 @@ Getopt::Flex::Config - Getopt::Flex's way of handling config
 
 =head1 VERSION
 
-version 1.04
+version 1.05
 
 =head1 DESCRIPTION
 
@@ -124,7 +124,7 @@ Getopt::Flex::Config - Configuration class for Getopt::Flex
 
 =head1 AUTHOR
 
-  Ryan P. Kelly <rpkelly@cpan.org>
+Ryan P. Kelly <rpkelly@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 

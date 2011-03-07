@@ -8,13 +8,13 @@ build_requires:
   Test::Warn: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.31
-generated_by: 'Dist::Zilla version 2.101151'
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.200004, CPAN::Meta::Converter version 2.110440'
 license: mit
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: Getopt-Flex
-recommends: {}
 requires:
   Carp: 0
   Clone: 0
@@ -22,4 +22,4 @@ requires:
   Moose::Meta::TypeConstraint: 0
   Moose::Util::TypeConstraints: 0
   MooseX::StrictConstructor: 0
-version: 1.04
+version: 1.05
