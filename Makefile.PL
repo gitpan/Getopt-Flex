@@ -27,12 +27,13 @@ my %WriteMakefileArgs = (
   'PREREQ_PM' => {
     'Carp' => '0',
     'Clone' => '0',
+    'Hash::Merge' => '0',
     'Moose' => '0',
     'Moose::Meta::TypeConstraint' => '0',
     'Moose::Util::TypeConstraints' => '0',
     'MooseX::StrictConstructor' => '0'
   },
-  'VERSION' => '1.06',
+  'VERSION' => '1.07',
   'test' => {
     'TESTS' => 't/*.t'
   }

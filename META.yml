@@ -19,8 +19,9 @@ name: Getopt-Flex
 requires:
   Carp: 0
   Clone: 0
+  Hash::Merge: 0
   Moose: 0
   Moose::Meta::TypeConstraint: 0
   Moose::Util::TypeConstraints: 0
   MooseX::StrictConstructor: 0
-version: 1.06
+version: 1.07

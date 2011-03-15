@@ -1,6 +1,6 @@
 package Getopt::Flex;
 BEGIN {
-  $Getopt::Flex::VERSION = '1.06';
+  $Getopt::Flex::VERSION = '1.07';
 }
 
 # ABSTRACT: Option parsing, done different.
@@ -8,6 +8,7 @@ BEGIN {
 use strict; #shut up cpants
 use warnings; #shut up cpants
 use Clone;
+use Hash::Merge qw(merge);
 use Moose;
 use MooseX::StrictConstructor;
 use Getopt::Flex::Config;
@@ -27,6 +28,7 @@ has 'spec' => (
     is => 'ro',
     isa => 'HashRef[HashRef[Str|CodeRef|ScalarRef|ArrayRef|HashRef]]',
     required => 1,
+	writer => '_set_spec',
 );
 
 #the parsed Getopt::Flex::Spec object
@@ -515,6 +517,20 @@ sub _parse_bundled_switch {
 }
 
 
+sub add_spec {
+	my ($self, $spec) = @_;
+
+	my $ospec = $self->spec();
+	my $nspec = merge($spec, $ospec);
+
+	$self->_set_spec($nspec);
+
+    $self->_spec(Getopt::Flex::Spec->new({ spec => $self->spec(), config => $self->_config() }));
+
+	return $nspec;
+}
+
+
 sub set_args {
     my ($self, $ref) = @_;
     return $self->_args(Clone::clone($ref));
@@ -648,7 +664,7 @@ Getopt::Flex - Option parsing, done different.
 
 =head1 VERSION
 
-version 1.06
+version 1.07
 
 =head1 SYNOPSIS
 
@@ -810,6 +826,9 @@ The following is an example of all possible arguments to an option specification
           'default' => 'input.txt',
       }
   };
+
+Additional specifications may be added by calling C<add_spec>. This allows
+one to dynamically build up a set of valid options.
 
 =head2 Specifying a var
 
@@ -1051,6 +1070,10 @@ The default value is false.
 
 Invoking this method will cause the module to parse its current arguments array,
 and apply any values found to the appropriate matched references provided.
+
+=head2 add_spec
+
+Add an additional spec to the current spec.
 
 =head2 set_args
 

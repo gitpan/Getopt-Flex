@@ -1,6 +1,6 @@
 package Getopt::Flex::Spec::Argument;
 BEGIN {
-  $Getopt::Flex::Spec::Argument::VERSION = '1.06';
+  $Getopt::Flex::Spec::Argument::VERSION = '1.07';
 }
 
 # ABSTRACT: Getopt::Flex's way of specifying arguments
@@ -376,7 +376,7 @@ Getopt::Flex::Spec::Argument - Getopt::Flex's way of specifying arguments
 
 =head1 VERSION
 
-version 1.06
+version 1.07
 
 =head1 DESCRIPTION
 

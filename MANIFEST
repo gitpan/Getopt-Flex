@@ -27,5 +27,6 @@ t/11-types.t
 t/12-case-mode.t
 t/13-get-switch.t
 t/14-auto-help.t
+t/15-add-spec.t
 t/release-pod-coverage.t
 t/release-pod-syntax.t
